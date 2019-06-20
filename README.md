@@ -6,6 +6,6 @@ Practice on leetcode.com
     - C++
     - Python
 
-- script
-
 - shell
+
+- sql
