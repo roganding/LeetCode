@@ -32,11 +32,15 @@ public class No7 {
             }
             return sum;
         } else {
+            if (x == Integer.MIN_VALUE) {
+                return 0;
+            }
             return -reverse01(-x);
         }
     }
 
     public static void main(String[] args) {
-        System.out.println(reverse01(-1800002012));
+        System.out.println(reverse01(Integer.MAX_VALUE));
+        System.out.println(reverse01(-2147483648));
     }
 }
