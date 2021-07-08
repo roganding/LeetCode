@@ -18,17 +18,19 @@ public class No7 {
                     max_pow = i;
                     break;
                 }
-                int tmp = x / 10;
-                int remain = x - 10* tmp;
-                array[i] = remain;
-                x = tmp;
+                array[i] = x % 10;
+                x = x / 10;
             }
             int sum = 0;
             for (int i = 0; i <= max_pow; i++ ) {
                 if (sum >= Integer.MAX_VALUE) { // 溢出返回0
                     return 0;
                 }
-                sum += array[i] * Math.pow(10, max_pow - i);
+                int j = array[i];
+                if (j == 0) {
+                    continue;
+                }
+                sum += j * Math.pow(10, max_pow - i);
             }
             return sum;
         } else {
@@ -42,5 +44,6 @@ public class No7 {
     public static void main(String[] args) {
         System.out.println(reverse01(Integer.MAX_VALUE));
         System.out.println(reverse01(-2147483648));
+        System.out.println(reverse01(9990000));
     }
 }
