@@ -1,3 +1,5 @@
+package leetcode07;
+
 /**
  * <code>easy</code>
  * Integer Reverse 整数反转
